@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>PharmaHealth - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<div class="dashboard-layout">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="logo-icon">
+                ✚
+            </div>
+
+            <div>
+                <h2>PharmaHealth</h2>
+                <small>Pharmacy Management</small>
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navigation">
+
+            <a href="#" class="nav-item active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#stock-management" class="nav-item">
+                <span>▣</span>
+                Stock Management
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>▱</span>
+                Supplier Management
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>▤</span>
+                Sales / Billing
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>♙</span>
+                Customer Management
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>◷</span>
+                Expiry & Batch Alerts
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>↔️</span>
+                Return & Exchange
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>▥</span>
+                Reports & Analytics
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div class="profile-circle">
+                    A
+                </div>
+
+                <div>
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+
+                <span>⌄</span>
+
+            </div>
+
+
+            <a href="index.html" class="logout">
+                ⇥ &nbsp; Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="search-container">
+
+                <span>⌕</span>
+
+                <input
+                    id="medicine-search-input"
+                    type="text"
+                    placeholder="Search medicine, customer, batch..."
+                >
+
+            </div>
+
+
+            <div class="top-right">
+
+                <div class="notification">
+                    ♧
+                    <span></span>
+                </div>
+
+
+                <div class="top-profile">
+
+                    <div class="profile-circle">
+                        A
+                    </div>
+
+                    <div>
+                        <strong>Admin</strong>
+                        <small>Administrator</small>
+                    </div>
+
+                    <span>⌄</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- CONTENT -->
+
+        <section class="content">
+
+
+            <!-- WELCOME -->
+
+            <div class="welcome-card">
+
+                <div>
+
+                    <p class="small-heading">
+                        PHARMACY INVENTORY DASHBOARD
+                    </p>
+
+                    <h1>
+                        Good Morning,
+                        <strong>Admin</strong> ☀
+                    </h1>
+
+                    <p>
+                        Here's what's happening with your pharmacy today.
+                    </p>
+
+                </div>
+
+
+                <div class="date-box">
+
+                    📅 &nbsp; Monday, 07 September 2026
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= STAT CARDS ================= -->
+
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        💊
+                    </div>
+
+                    <h2 id="total-medicines-count">1,248</h2>
+
+                    <p>Total Medicines</p>
+
+                    <small class="positive">
+                        ↑ 8.2% from last month
+                    </small>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ▣
+                    </div>
+
+                    <h2>₹8.52L</h2>
+
+                    <p>Total Stock Value</p>
+
+                    <small class="positive">
+                        ↑ 5.4% from last month
+                    </small>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon yellow">
+                        ⚠
+                    </div>
+
+                    <h2 id="low-stock-count">18</h2>
+
+                    <p>Low Stock Items</p>
+
+                    <small class="warning">
+                        Needs restocking
+                    </small>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+                        ▣
+                    </div>
+
+                    <h2>12</h2>
+
+                    <p>Expiry Alerts</p>
+
+                    <small class="danger">
+                        Within 30 days
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= LOWER SECTION ================= -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- STOCK OVERVIEW -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <h2>
+                            ▣ &nbsp; Stock Overview
+                        </h2>
+
+                        <a href="#">
+                            View All →
+                        </a>
+
+                    </div>
+
+
+                    <div class="stock-list">
+
+
+                        <div class="stock-item">
+
+                            <div class="stock-info">
+                                <span>Tablets</span>
+                                <strong>412</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div
+                                    class="progress-bar"
+                                    style="width: 85%">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="stock-item">
+
+                            <div class="stock-info">
+                                <span>Capsules</span>
+                                <strong>286</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div
+                                    class="progress-bar"
+                                    style="width: 65%">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="stock-item">
+
+                            <div class="stock-info">
+                                <span>Syrups</span>
+                                <strong>198</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div
+                                    class="progress-bar"
+                                    style="width: 55%">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="stock-item">
+
+                            <div class="stock-info">
+                                <span>Injectables</span>
+                                <strong>124</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div
+                                    class="progress-bar"
+                                    style="width: 38%">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="stock-item">
+
+                            <div class="stock-info">
+                                <span>Ointments & Creams</span>
+                                <strong>76</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div
+                                    class="progress-bar"
+                                    style="width: 24%">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RECENT TRANSACTIONS -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <h2>
+                            ▤ &nbsp; Recent Transactions
+                        </h2>
+
+                        <a href="#">
+                            View All →
+                        </a>
+
+                    </div>
+
+
+                    <div class="transaction-table">
+
+                        <div class="table-head">
+
+                            <span>Customer</span>
+                            <span>Medicine</span>
+                            <span>Amount</span>
+                            <span>Status</span>
+
+                        </div>
+
+
+                        <div class="transaction">
+
+                            <span class="customer">
+                                <i>R</i>
+                                Rahul Sharma
+                            </span>
+
+                            <span>Paracetamol</span>
+
+                            <strong>₹120</strong>
+
+                            <span class="completed">
+                                Completed
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="transaction">
+
+                            <span class="customer">
+                                <i>P</i>
+                                Priya Singh
+                            </span>
+
+                            <span>Amoxicillin</span>
+
+                            <strong>₹450</strong>
+
+                            <span class="completed">
+                                Completed
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="transaction">
+
+                            <span class="customer">
+                                <i>A</i>
+                                Amit Kumar
+                            </span>
+
+                            <span>Cough Syrup</span>
+
+                            <strong>₹240</strong>
+
+                            <span class="completed">
+                                Completed
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="transaction">
+
+                            <span class="customer">
+                                <i>N</i>
+                                Neha Patel
+                            </span>
+
+                            <span>Vitamin D3</span>
+
+                            <strong>₹180</strong>
+
+                            <span class="completed">
+                                Completed
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="transaction">
+
+                            <span class="customer">
+                                <i>S</i>
+                                Sunil Verma
+                            </span>
+
+                            <span>ORS</span>
+
+                            <strong>₹60</strong>
+
+                            <span class="completed">
+                                Completed
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ================= MEDICINE INVENTORY (STOCK MANAGEMENT) ================= -->
+
+            <div class="medicine-panel" id="stock-management">
+
+                <div class="panel-title-area">
+
+                    <div>
+                        <h2>💊 &nbsp; Medicine Stock & Inventory</h2>
+                        <p class="panel-subtitle">Live stock levels, pricing, and inventory management</p>
+                    </div>
+
+                    <button class="add-medicine-btn" id="open-add-modal-btn">
+                        ✚ &nbsp; Add Medicine
+                    </button>
+
+                </div>
+
+                <div class="medicine-table-container">
+
+                    <table class="medicine-table" id="medicine-table">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Medicine Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="medicine-table-body">
+                            <tr>
+                                <td colspan="6" class="empty-state">Loading medicines from database...</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= ALERTS ================= -->
+
+            <div class="alerts-panel">
+
+                <div class="alert-title">
+                    🔔 &nbsp; Alerts & Reminders
+                </div>
+
+
+                <div class="alert-item">
+
+                    <div class="alert-icon">
+                        ⚠
+                    </div>
+
+                    <div>
+                        <strong>12</strong>
+                        <p>Items nearing expiry</p>
+                        <a href="#">View details →</a>
+                    </div>
+
+                </div>
+
+
+
+                <div class="alert-item">
+
+                    <div class="alert-icon">
+                        ▣
+                    </div>
+
+                    <div>
+                        <strong>18</strong>
+                        <p>Items low in stock</p>
+                        <a href="#">Restock now →</a>
+                    </div>
+
+                </div>
+
+
+
+                <div class="alert-item">
+
+                    <div class="alert-icon">
+                        ↔️
+                    </div>
+
+                    <div>
+                        <strong>3</strong>
+                        <p>Pending returns/exchanges</p>
+                        <a href="#">View list →</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- ================= ADD MEDICINE MODAL ================= -->
+
+<div class="modal-backdrop" id="add-medicine-modal">
+
+    <div class="modal-card">
+
+        <div class="modal-header">
+
+            <div>
+                <h3>Add New Medicine</h3>
+                <p>Enter details to update pharmacy inventory database</p>
+            </div>
+
+            <button class="modal-close-btn" id="close-add-modal-btn">✕</button>
+
+        </div>
+
+        <form id="add-medicine-form">
+
+            <div class="form-grid">
+
+                <div class="form-group full-width">
+                    <label for="med-name">Medicine Name *</label>
+                    <input type="text" id="med-name" placeholder="e.g. Paracetamol 500mg" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="med-category">Category *</label>
+                    <select id="med-category" required>
+                        <option value="">Select category</option>
+                        <option value="Tablets">Tablets</option>
+                        <option value="Capsules">Capsules</option>
+                        <option value="Syrups">Syrups</option>
+                        <option value="Injectables">Injectables</option>
+                        <option value="Ointments & Creams">Ointments & Creams</option>
+                        <option value="Antibiotics">Antibiotics</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="med-price">Price (₹) *</label>
+                    <input type="number" id="med-price" step="0.01" min="0" placeholder="e.g. 25.00" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="med-quantity">Quantity in Stock *</label>
+                    <input type="number" id="med-quantity" min="0" placeholder="e.g. 100" required>
+                </div>
+
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="cancel-btn" id="cancel-add-modal-btn">Cancel</button>
+                <button type="submit" class="save-btn" id="save-medicine-btn">Save Medicine</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- ================= API & INTERACTIVITY SCRIPT ================= -->
+
+<script>
+    let allMedicines = [];
+
+    const API_URL = '/api/medicines';
+
+    const modal = document.getElementById('add-medicine-modal');
+    const openModalBtn = document.getElementById('open-add-modal-btn');
+    const closeModalBtn = document.getElementById('close-add-modal-btn');
+    const cancelModalBtn = document.getElementById('cancel-add-modal-btn');
+    const addMedicineForm = document.getElementById('add-medicine-form');
+    const searchInput = document.getElementById('medicine-search-input');
+    const tableBody = document.getElementById('medicine-table-body');
+    const totalCountEl = document.getElementById('total-medicines-count');
+    const lowStockCountEl = document.getElementById('low-stock-count');
+
+    // Modal Handlers
+    function openModal() {
+        modal.classList.add('open');
+        document.getElementById('med-name').focus();
+    }
+
+    function closeModal() {
+        modal.classList.remove('open');
+        addMedicineForm.reset();
+    }
+
+    openModalBtn.addEventListener('click', openModal);
+    closeModalBtn.addEventListener('click', closeModal);
+    cancelModalBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+
+    // Render medicines to table
+    function renderMedicines(items) {
+        if (!items || items.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="6" class="empty-state">No medicines found in database.</td></tr>';
+            return;
+        }
+
+        tableBody.innerHTML = items.map(med => {
+            const isLow = med.quantity <= 20;
+            const statusClass = isLow ? 'low' : 'available';
+            const statusText = isLow ? 'Low Stock' : 'In Stock';
+            const price = Number(med.price || 0).toFixed(2);
+
+            return `
+                <tr>
+                    <td><strong>#${med.id}</strong></td>
+                    <td><strong>${escapeHtml(med.name)}</strong></td>
+                    <td>${escapeHtml(med.category || 'General')}</td>
+                    <td>₹${price}</td>
+                    <td>${med.quantity}</td>
+                    <td><span class="medicine-status ${statusClass}">${statusText}</span></td>
+                </tr>
+            `;
+        }).join('');
+    }
+
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.innerText = text || '';
+        return div.innerHTML;
+    }
+
+    // Load medicines from backend
+    async function loadMedicines() {
+        try {
+            const res = await fetch(API_URL);
+            if (!res.ok) throw new Error('API fetch failed');
+            allMedicines = await res.json();
+            renderMedicines(allMedicines);
+            updateStats(allMedicines);
+        } catch (err) {
+            console.error('Error fetching medicines:', err);
+            tableBody.innerHTML = '<tr><td colspan="6" class="empty-state" style="color: #c53030;">Failed to load medicines from backend. Check API status.</td></tr>';
+        }
+    }
+
+    function updateStats(medicines) {
+        if (totalCountEl) {
+            totalCountEl.innerText = medicines.length.toLocaleString('en-IN');
+        }
+        if (lowStockCountEl) {
+            const lowStockCount = medicines.filter(m => m.quantity <= 20).length;
+            lowStockCountEl.innerText = lowStockCount;
+        }
+    }
+
+    // Add new medicine
+    addMedicineForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = document.getElementById('save-medicine-btn');
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Saving...';
+
+        const payload = {
+            name: document.getElementById('med-name').value.trim(),
+            category: document.getElementById('med-category').value,
+            price: parseFloat(document.getElementById('med-price').value),
+            quantity: parseInt(document.getElementById('med-quantity').value, 10)
+        };
+
+        try {
+            const res = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (!res.ok) throw new Error('Failed to save medicine');
+
+            closeModal();
+            await loadMedicines();
+        } catch (err) {
+            console.error('Error saving medicine:', err);
+            alert('Failed to save medicine to database.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'Save Medicine';
+        }
+    });
+
+    // Search filter
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase().trim();
+        if (!query) {
+            renderMedicines(allMedicines);
+            return;
+        }
+
+        const filtered = allMedicines.filter(m => 
+            (m.name && m.name.toLowerCase().includes(query)) ||
+            (m.category && m.category.toLowerCase().includes(query)) ||
+            (m.id && String(m.id).includes(query))
+        );
+
+        renderMedicines(filtered);
+    });
+
+    // Initial load
+    document.addEventListener('DOMContentLoaded', loadMedicines);
+</script>
+
+</body>
+</html>

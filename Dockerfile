@@ -1,19 +1,13 @@
-# Stage 1: Build React app
-FROM node:20-alpine AS builder
-
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm install
-
-COPY . .
-RUN npm run build
-
-# Stage 2: Serve React using Nginx
 FROM nginx:alpine
 
-COPY --from=builder /app/dist /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
 
+# Remove default nginx static assets
+RUN rm -rf ./*
+
+# Copy static frontend files and Nginx config
+COPY index.html dashboard.html style.css ./
+COPY public/ ./public/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
